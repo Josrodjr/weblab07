@@ -14,7 +14,7 @@ const byId = (state = {}, action) => {
         user: action.payload.user,
         upvotes: 0,
         downvotes: 0,
-        comments_ids: [],
+        comments: ['Comments: '],
       }
 
       return {
@@ -22,6 +22,56 @@ const byId = (state = {}, action) => {
         [id]: freshpost, 
       };
     }
+
+    case types.ADDED_COMMENT: {
+      const id  = action.payload.post_id;
+      const modified_post = state[id];
+      const { comments } = modified_post;
+
+      modified_post.comments.push(action.payload.content)
+
+      console.log(modified_post);
+
+      return {
+        ...state,
+        id: {
+          modified_post
+        }
+      }
+    }
+
+    case types.UPVOTE: {
+      const id  = action.payload.id;
+      const modified_post = state[id];
+
+      modified_post.upvotes += 1;
+
+      console.log(modified_post);
+
+      return {
+        ...state,
+        id: {
+          modified_post
+        }
+      }
+    }
+
+    case types.DOWNVOTE: {
+      const id  = action.payload.id;
+      const modified_post = state[id];
+
+      modified_post.downvotes += 1;
+
+      console.log(modified_post);
+
+      return {
+        ...state,
+        id: {
+          modified_post
+        }
+      }
+    }
+
     default: return state;
   }
 };

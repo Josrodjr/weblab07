@@ -4,14 +4,15 @@ import { Provider } from 'react-redux';
 import configureStore from './configureStore';
 import Posts from '../src/components/combinedPosts';
 
-const store = configureStore();
+import './style.css';
 
-//store.dispatch(actions.addPost(v4(), "HOLA", "JUANITO"));
+const store = configureStore();
 
 ReactDOM.render(
   <Provider store={store}>
   <div>
     <Posts />
+    <div className="bug">solo se ven los comentarios ingresados despues de upvotear</div>
   </div>
   </Provider>,
   document.getElementById('root'),

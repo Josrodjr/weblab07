@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.test {
+  width: 500px;
+  height: 100px;
+}
+
+.posttextarea {
+  width: 60%;
+  height: 5rem;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+  text-align: top;
+}
+
+.usernamearea {
+  width: 10%;
+  height: 3rem;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.submitpost {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background: #bc3315;
+	background-color:#d0451b;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-shadow:0px 1px 0px #854629;
+}
+
+.post_unified {
+  background: #cf866c;
+  height: 100%;
+}
+
+.upbtn {
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background: #17c22e;
+	background-color:#1bc532;
+	border-radius:3px;
+	border:1px solid #096615;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-shadow:0px 1px 0px #0e4913;
+}
+
+.downbtn {
+	box-shadow:inset 0px 1px 0px 0px #db3f18;
+	background: #741616;
+	background-color:#961313;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-shadow:0px 1px 0px #791717;
+}
+
+
+.commentbox {
+  width: 45%;
+  height: 2rem;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.submitcomment {
+  box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background: #b1c217;
+	background-color:#bbe429;
+	border-radius:3px;
+	border:1px solid #096615;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-shadow:0px 1px 0px #0e4913;
+}
+
+.comment {
+  padding-top: 10px;
+  color: black;
+  padding-left: 5rem;
+}
+
+.postcontent {
+  font-weight: bold;
+  font-size: 30px;
+  color: black;
+}
+
+.postuser {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: 15px;
+  color: black;
+}
+
+.bug {
+  font-style: italic;
+  font-weight: lighter;
+  color: green;
+  text-decoration: underline;
+  padding-left: 15px;
+}

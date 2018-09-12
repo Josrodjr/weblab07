@@ -5,23 +5,22 @@ import * as actions from '../../actions';
 
 import '../../style.css';
 
-class PostFormDummy extends React.Component {
+class CommentFormDummy extends React.Component {
   render() {
     const { onSubmit } = this.props;
+    const id_value = this.props.id;
     return (
       <Fragment>
-        <input className="posttextarea" type="text" placeholder="Contenido" ref={ node => {this.contentInput = node;}}/>
-        <input className="usernamearea" type="text" placeholder="Username" ref={ node => {this.userInput = node;}}/>
-        <button className="submitpost"
+        <input className="commentbox" type="text" placeholder="Comentario" ref={ node => {this.contentInput = node;}}/>
+        <button className="submitcomment"
         onClick={
           () => {
             onSubmit(
+              id_value,
               this.contentInput.value, 
-              this.userInput.value,
             );
             //clear the values
             this.contentInput.value = "";
-            this.userInput.value = "";
           }
         }
         >Post</button>
@@ -33,9 +32,9 @@ class PostFormDummy extends React.Component {
 
 export default connect(
   undefined,
-  dispatch => ({
-    onSubmit(content, user) {
-      dispatch(actions.addPost(v4(), content, user));
+  (dispatch) => ({
+    onSubmit(id_value, content) {
+      dispatch(actions.addComment(id_value, content));
     }
-  })
-)(PostFormDummy);
+  }),
+)(CommentFormDummy);  

@@ -15,13 +15,25 @@ export const addPost = (
 
 export const addComment = (
   post_id,
-  user,
   content,
 ) => ({
   type: types.ADDED_COMMENT,
   payload: {
     post_id,
-    user,
     content,
+  }
+});
+
+export const addUpvote = (id) => ({
+  type: types.UPVOTE,
+  payload: {
+    id,
+  }
+});
+
+export const addDownvote = (id) => ({
+  type: types.DOWNVOTE,
+  payload: {
+    id,
   }
 });
